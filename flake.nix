@@ -12,15 +12,16 @@
       pkgs = import nixpkgs {
         inherit system;
       };
+      version = "1.1.4";
     in
     {
       packages.${system}.default = pkgs.stdenv.mkDerivation {
         pname = "goose-desktop";
-        version = "1.0.29";
+        inherit version;
 
         src = pkgs.fetchurl {
-          url = "https://github.com/block/goose/releases/download/stable/goose_1.0.29_amd64.deb";
-          sha256 = "sha256-HkJbp37hB3GqQb88/Cufl38qEUXUtiCPtIpHco0bSGA=";
+          url = "https://github.com/block/goose/releases/download/stable/goose_${version}_amd64.deb";
+          sha256 = "sha256-If6m6UxgdLUeh1Bknd5QBAecfTmHVsE/m7aT/1d0uZQ=";
         };
 
         nativeBuildInputs = [
