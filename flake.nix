@@ -82,8 +82,8 @@
           platforms = platforms.linux;
           maintainers = [
             {
-              name = "Riley";
-              email = "riley@ryleu.me";
+              name = "Riley McLain";
+              email = "riley.mclain@watts.ai";
             }
           ];
         };
