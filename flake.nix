@@ -12,7 +12,7 @@
       pkgs = import nixpkgs {
         inherit system;
       };
-      version = "1.1.4";
+      version = "1.2.0";
     in
     {
       packages.${system}.default = pkgs.stdenv.mkDerivation {
@@ -21,7 +21,7 @@
 
         src = pkgs.fetchurl {
           url = "https://github.com/block/goose/releases/download/stable/goose_${version}_amd64.deb";
-          sha256 = "sha256-If6m6UxgdLUeh1Bknd5QBAecfTmHVsE/m7aT/1d0uZQ=";
+          sha256 = "sha256-VDra1Bg8m6bZh/NfATXY4qFlvODoDcW3E63ILcnJEYI=";
         };
 
         nativeBuildInputs = [
@@ -39,15 +39,14 @@
           cups
           dbus
           expat
-          gsettings-desktop-schemas # Provides GSettings schemas.
+          gsettings-desktop-schemas
           gtk3
           libdrm
           libgbm
-          libglvnd # Provides libGL.so.1 for OpenGL.
+          libglvnd
           libxkbcommon
           nss
           pango
-          systemd
         ];
 
         unpackPhase = ''
