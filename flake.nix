@@ -12,7 +12,7 @@
       pkgs = import nixpkgs {
         inherit system;
       };
-      version = "1.2.0";
+      version = "1.3.0";
     in
     {
       packages.${system}.default = pkgs.stdenv.mkDerivation {
@@ -21,7 +21,7 @@
 
         src = pkgs.fetchurl {
           url = "https://github.com/block/goose/releases/download/stable/goose_${version}_amd64.deb";
-          sha256 = "sha256-VDra1Bg8m6bZh/NfATXY4qFlvODoDcW3E63ILcnJEYI=";
+          sha256 = "sha256-t8gP2oPCVGPdV7kRl49z3TbrKJekubUhYqXvxeuD+jM=";
         };
 
         nativeBuildInputs = [
